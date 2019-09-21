@@ -1,0 +1,10 @@
+i=$1
+while cmp "$i" "$2"; do
+  shift
+  if test "$#" -lt "2"
+  then
+    echo "Files equal"
+    break
+  fi
+done
+echo "$1"

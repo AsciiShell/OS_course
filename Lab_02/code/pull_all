@@ -1,0 +1,11 @@
+base=$PWD
+for dir in `find . -type d -name .git`
+do 
+    echo "${dir}"
+    cd $dir/..
+    git branch
+    git remote -v
+    git pull
+    echo -e "================================"
+    cd $base
+done

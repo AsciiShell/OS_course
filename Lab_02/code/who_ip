@@ -1,0 +1,6 @@
+for line in $(who am I); do
+  IP=$(echo $line | grep '(*)' | cut -c 2- | rev | cut -c 2- | rev)
+  if test "$IP" != "" ; then
+    echo $IP
+  fi
+done

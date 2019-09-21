@@ -1,0 +1,4 @@
+lastDIR=$PWD
+cd "$1"
+ls -l "$2"
+cd "$lastDIR"

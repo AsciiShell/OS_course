@@ -6,23 +6,60 @@
 \begin{document}
 \input{data/title.tex}
 
-\section{ЦЕЛИ РАБОТЫ}
-
 \begin{enumerate}
 \item Ввести несколько переменных и присвоить им значения:
-	{\small \verbatiminput{code/create_vars.sh}}
+	{\small \verbatiminput{exec/1_create_vars.sh}}
 \item просмотреть значения всех введенных переменных (встроенная команда set);
-	{\small \verbatiminput{code/var_list.sh}}
+	{\small \verbatiminput{exec/2_var_list.sh}}
 \item создать простейшую командную процедуру, в которой используется значение позиционных параметров;
-	{\small \verbatiminput{code/base_command.sh}}
+	{\small \verbatiminput{exec/3_base_command.sh}}
 \item ввести и отладить командные процедуры: print3, cmplist, copy3, menu;
-\item модифицировать процедуру print3 так, чтобы она выводила на стандартный вывод только текстовые файлы;
-\item модифицировать процедуру cmplist так, чтобы она правильно работала в случае, когда все сравниваемые файлы одинаковы;
-\item модифицировать стандартные переменные sh (PS1, PS2, PATH);
-\item проанализировать управляющий командный файл (.profile) в домашнем каталоге и каталоге /etc;
-\item просмотреть стартовый командный файл /etc/rc и конфигурационный командный файл /etc/rc.conf;
-\item опробовать ввод командных процедур в интерактивном режиме.
 
+	print3 source code
+	{\small \verbatiminput{code/print3}}
+	print3 execution
+	{\small \verbatiminput{exec/4_print3.sh}}
+	
+	cmplist source code
+	{\small \verbatiminput{code/cmplist}}
+	cmplist execution
+	{\small \verbatiminput{exec/4_cmplist.sh}}
+	
+	copy3 source code
+	{\small \verbatiminput{code/copy3}}
+	copy3 execution
+	{\small \verbatiminput{exec/4_copy3.sh}}
+	
+	menu source code
+	{\small \verbatiminput{code/menu}}
+	menu execution
+	{\small \verbatiminput{exec/4_menu.sh}}
+\item модифицировать процедуру print3 так, чтобы она выводила на стандартный вывод только текстовые файлы;
+	{\small \verbatiminput{code/print4}}
+	{\small \verbatiminput{exec/5_print4.sh}}
+\item модифицировать процедуру cmplist так, чтобы она правильно работала в случае, когда все сравниваемые файлы одинаковы;
+	{\small \verbatiminput{code/cmplist2}}
+	{\small \verbatiminput{exec/6_cmplist2.sh}}
+\item модифицировать стандартные переменные sh (PS1, PS2, PATH);
+	{\small \verbatiminput{exec/7_system.sh}}
+\item проанализировать управляющий командный файл (.profile) в домашнем каталоге и каталоге /etc;
+	{\small \verbatiminput{exec/8_profile.sh}}
+	В файле устанавливаются программы для редактирования и просмотров документов, добавляются переменные из файла .shrc, отображается случайная подсказка для free-bsd
+\item просмотреть стартовый командный файл /etc/rc и конфигурационный командный файл /etc/rc.conf;
+
+	Файл /etc/rc устанавливает переменные, выполняет настройку, проверяет переменные.
+	Файл /etc/rc.conf настраивает сетевое взаимодействие.
+\item опробовать ввод командных процедур в интерактивном режиме.
+	{\small \verbatiminput{exec/10_interactive.sh}}
+\item Разработайте две командные процедуры.
+
+	Находит все git репозитории в текущем поддереве и выполняет обновление каждого из них.
+	{\small \verbatiminput{code/pull_all}}
+	{\small \verbatiminput{exec/11_pull_all.sh}}
+	
+	Печатает только IP адрес, с которого осуществляется доступ к серверу.
+	{\small \verbatiminput{code/who_ip}}
+	{\small \verbatiminput{exec/11_who_ip.sh}}
 \end{enumerate}
 
 

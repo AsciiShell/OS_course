@@ -1,0 +1,4 @@
+for file in $(ls); do
+  echo "printing $file"
+  more "$file"
+done
