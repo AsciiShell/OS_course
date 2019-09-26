@@ -15,8 +15,7 @@ script:
 deploy:
   - provider: releases
     api_key: $TOKEN
-    file: 
-      - "Lab_02/main.pdf"
+    file: **/main.pdf
     skip_cleanup: true
     on:
       branch: master
