@@ -1,0 +1,7 @@
+for file in $(ls); do
+  case "$file" in
+  *txt) 
+    echo "printing $file"
+    more "$file";;
+  esac
+done

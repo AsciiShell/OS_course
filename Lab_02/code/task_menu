@@ -1,0 +1,16 @@
+echo "1)  copy 
+2)  move
+3)  remove
+which function do you wish?"
+read command
+case "$command" in
+1) echo "Where copy file $1?"
+read target 
+cp "$1" $target;;
+2) echo "Where move file $1?" 
+read target 
+mv "$1" $target;;
+3) echo Deleting
+rm "$1" ;;
+*) echo not available ;;
+esac

@@ -1,0 +1,11 @@
+echo "1)	ls
+2)	date
+3)	pwd
+which function do you wish?"
+read command
+case "$command" in
+1) ls -Fc ;;
+2) date ;;
+3) pwd ;;
+*) echo not available ;;
+esac

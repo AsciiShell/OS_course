@@ -1,0 +1,14 @@
+echo "Enter words [Type q, to quit]"
+while read line; do
+  if test "$line" = "q" 
+  then
+    echo "Breaking"
+    break
+  fi
+  if test "$line" = ""
+  then
+    continue
+  else
+    echo "$line" >> dump
+  fi
+done
