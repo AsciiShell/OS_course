@@ -1,7 +1,3 @@
-# safelist
-#branches:
-#  only:
-#    - master
 language: bash
 
 services:
@@ -15,7 +11,8 @@ script:
 deploy:
   - provider: releases
     api_key: $TOKEN
-    file: **/main.pdf
+    file: 
+      - "Lab_02/main.pdf"
     skip_cleanup: true
     on:
       branch: master
