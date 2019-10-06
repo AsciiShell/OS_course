@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
             count += 1;
         }
     }
-    printf("Total number of files: %d\n", count);
+    printf("Total number of directories: %d\n", count);
     exit(0);
 
 }
