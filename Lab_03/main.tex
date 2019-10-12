@@ -1,0 +1,28 @@
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,14pt]{article}
+
+\input{../text/preambular.tex}
+\begin{document}
+\input{data/title.tex}
+
+\tableofcontents
+\pagebreak
+
+\section{Задание}
+
+\subsection{Формулировка задания}
+Подсчитать число каталогов в родительском каталоге.
+Напечатать их имена и номера индексных дескрипторов.
+
+\subsection{Исходный текст программы}
+{\small \verbatiminput{main.c}}
+\subsection{Вызов программы}
+{\small \verbatiminput{exec.sh}}
+
+\subsection{Результат работы}
+Была создана программа, выводящая список каталогов в родительской директории.
+Для каждого каталога так же выводится индексный дескриптор.
+Кроме того, программа подсчитывает суммарное число файлов в родительском каталоге.
+
+\end{document}
