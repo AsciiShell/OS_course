@@ -1,21 +1,13 @@
-#include <sys/types.h>
 #include <fcntl.h>
-#include <sys/stat.h>
 #include <stdio.h>
 #include <unistd.h>
 #include "server.h"
-#include <stdio.h>
-#include <sys/types.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 #include <string.h>
 
 int main(int argc, char **argv) {
     int fdpub, fdpriv;
     struct message msg;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wmissing-noreturn"
     while (1) {
         if ((fdpub = open(PUBLIC_CHAN, O_RDONLY)) == -1) {
             perror(PUBLIC_CHAN);
@@ -35,6 +27,5 @@ int main(int argc, char **argv) {
         }
         close(fdpub);
     }
-#pragma clang diagnostic pop
     return 0;
 }

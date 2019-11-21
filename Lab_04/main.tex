@@ -1,0 +1,45 @@
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,14pt]{article}
+
+\input{../text/preambular.tex}
+\begin{document}
+\input{data/title.tex}
+
+\tableofcontents
+\pagebreak
+
+\section{Формулировка задания}
+Разработать фильтр, выполняющий центрирование каждой строки вводимого текста (максимальная длина строки – 50 символов).
+Придуманный фильтр -- перевести данные HEX формат.
+
+\section{Конвейер двух фильтров}
+
+\subsection{Исходный текст фильтра центрирования}
+{\small \verbatiminput{center_filter.c}}
+\subsection{Исходный текст фильтра перевода в HEX формат}
+{\small \verbatiminput{hex_filter.c}}
+\subsection{Исходный код программы}
+{\small \verbatiminput{task1.c}}
+\subsection{Вызов программы}
+{\small \verbatiminput{task1.sh}}
+
+\section{Применение неименованных программных каналов}
+
+\subsection{Исходный код программы}
+{\small \verbatiminput{task2.c}}
+\subsection{Вызов программы}
+{\small \verbatiminput{task2.sh}}
+
+\section{Применение именованных программных каналов}
+
+\subsection{Исходный код server.h}
+{\small \verbatiminput{server.h}}
+\subsection{Исходный код сервера}
+{\small \verbatiminput{server.c}}
+\subsection{Исходный код клиента}
+{\small \verbatiminput{client.c}}
+\subsection{Вызов программы}
+{\small \verbatiminput{task3.sh}}
+
+\end{document}
