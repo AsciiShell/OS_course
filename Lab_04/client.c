@@ -1,13 +1,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <sys/uio.h>
 #include <string.h>
 #include "server.h"
 #include <stdio.h>
-#include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 
 int main(int argc, char **argv) {
     struct message msg;
