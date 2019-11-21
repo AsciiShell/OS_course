@@ -9,7 +9,8 @@ int main() {
         for (size_t i = 0; i < (LEN - len) / 2; i++) {
             printf(" ");
         }
-        printf("%s\n", currentline);
+        printf("%s", currentline);
     }
+    printf("\n");
     return 0;
 }
