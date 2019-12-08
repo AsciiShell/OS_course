@@ -11,7 +11,9 @@ int main() {
 
     // Создаем кусок памяти
     shm_id = shmget(shared_key, sizeof(struct Data), IPC_CREAT | 0666);
-
+    if (shm_id == -1) {
+        perror("can't create shared memory");
+    }
     // Присоединяем кусок памяти
     p = (struct Data *) shmat(shm_id, NULL, 0);
 
@@ -26,7 +28,9 @@ int main() {
         printf("%d %d %d %d\n", p->a, p->arr[0], p->arr[1], p->arr[2]);
         sleep(1);
     }
-
+    if (shmctl(shm_id, IPC_RMID, NULL) == -1) {
+        perror("can't delete shared memory");
+    }
     return 0;
 }
 

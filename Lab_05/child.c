@@ -13,9 +13,13 @@ int main() {
 
     // Ищем кусок памяти
     shm_id = shmget(shared_key, sizeof(struct Data), 0);
-
+    if (shm_id == -1) {
+        perror("can't get shared memory");
+    }
     // Присоединяем
     p = (struct Data *) shmat(shm_id, NULL, 0);
+
+    printf("%d %d %d %d\n", p->a, p->arr[0], p->arr[1], p->arr[2]);
 
     // Изменяет
     p->arr[0] += 4;

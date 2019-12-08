@@ -10,6 +10,5 @@ add_executable(Lab_04_task2 Lab_04/task2.c)
 add_executable(Lab_04_client Lab_04/server.h Lab_04/client.c)
 add_executable(Lab_04_server Lab_04/server.h Lab_04/server.c)
 
-add_executable(Lab_05_server Lab_05/server.c)
 add_executable(Lab_05_parent Lab_05/header.h Lab_05/parent.c)
 add_executable(Lab_05_child Lab_05/header.h Lab_05/child.c)
