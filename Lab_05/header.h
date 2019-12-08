@@ -9,9 +9,10 @@
 #include <stdbool.h>
 
 #define MAX_SIZE 1000
-
+#define SLEEP_U_SEC 1000*100
 struct Salon {
     size_t size;
+    size_t free_count;
     int places[MAX_SIZE];
 };
 
@@ -39,5 +40,5 @@ struct Server {
 #define SHARED_MEMORY_OBJECT_NAME "my_shared_memory"
 const size_t SHARED_MEMORY_OBJECT_SIZE = sizeof(struct Server);
 // Имя семафора
-#define SEMAPHORE_NAME "/my_named_semaphore3"
+#define SEMAPHORE_NAME "/my_named_semaphore4"
 #endif //OS_COURSE_HEADER_H
