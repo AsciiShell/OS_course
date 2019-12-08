@@ -1,3 +1,3 @@
 set -ex
-cc child.c -o child.o -lrt -pthread
-cc parent.c -o parent.o -lrt -pthread
+cc client.c -o client.o -lrt -pthread
+cc server.c -o server.o -lrt -pthread
