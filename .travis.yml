@@ -12,9 +12,10 @@ deploy:
   - provider: releases
     api_key: $TOKEN
     file: 
-      - "Lab_02/main.pdf"
-      - "Lab_03/main.pdf"
-      - "Lab_04/main.pdf"
+      - "Lab_02/main_02.pdf"
+      - "Lab_03/main_03.pdf"
+      - "Lab_04/main_04.pdf"
+      - "Lab_05/main_05.pdf"
     skip_cleanup: true
     on:
       branch: master

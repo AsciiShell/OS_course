@@ -1,0 +1,34 @@
+%!TEX TS-program = xelatex
+
+\documentclass[a4paper,14pt]{article}
+
+\input{../text/preambular.tex}
+\begin{document}
+\input{data/title.tex}
+
+\tableofcontents
+\pagebreak
+
+\section{Формулировка задания}
+Разделяемая память. 
+Промоделировать продажу билетов на самолет. 
+Программа-продавец создает сегмент разделяемой памяти (или файл) и инициализирует его в соответствии с количеством мест в самолете. 
+Четыре программы-покупателя с различной периодичностью резервируют места в самолете. 
+В самолете предусмотреть салоны для курящих и не курящих. 
+Для синхронизации доступа к разделяемому ресурсу использовать семафоры. 
+Разработать структуру информации о покупке билета.
+
+Разделяемый сегмент в памяти и не родственные процессы.
+
+\subsection{Исходный код header.h}
+{\footnotesize \verbatiminput{header.h}}
+\subsection{Исходный код сервера}
+{\footnotesize \verbatiminput{server.c}}
+\subsection{Исходный код клиента}
+{\footnotesize \verbatiminput{client.c}}
+\subsection{Результат работы сервера}
+{\footnotesize \verbatiminput{server.sh}}
+\subsection{Результат работы клиента}
+{\footnotesize \verbatiminput{client.sh}}
+
+\end{document}
